@@ -13,7 +13,7 @@ class DmozSpider(CrawlSpider):
 
     def parse(self, response):
         print 'url:%s' % response.url
-        print response.text
+        print response.textee
         urls = response.xpath("//body/div[@id='wrapper']/div[@id='head']/div[@class='head_wrapper']/div[@id='u1']/a").re("https?://.*\.com")
         for url in urls:
             yield Request(url, callback = 'parse_directory')
