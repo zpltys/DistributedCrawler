@@ -21,3 +21,7 @@ class DmozSpider(CrawlSpider):
         item['resource'] = 'taobao'
         item['rank'] = 0.5
         yield item
+        print response.text
+        urls = response.xpath("//body/div[@id='wrapper']/div[@id='head']/div[@class='head_wrapper']/div[@id='u1']/a").re("https?://.*\.com")
+        for url in urls:
+            yield Request(url, callback = 'parse_directory')
