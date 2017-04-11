@@ -74,6 +74,10 @@ ITEM_PIPELINES = {
     'scrapy_redis.pipelines.RedisPipeline': 400,
 }
 
+MYSQL_HOST = 'localhost'
+MYSQL_USER = 'scrapy'
+MYSQL_PASSWD = '123456'
+MYSQL_DBS = "taobao"
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
