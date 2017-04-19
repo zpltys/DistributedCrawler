@@ -31,3 +31,5 @@ class UrlSpider(scrapy.Spider):
             r.lpush('test:urls',url)
             #yield Request(url=url,callback=self.parse)
 
+
+
